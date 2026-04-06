@@ -6,6 +6,14 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
+    <style type="text/css">
+        .auto-style1 {
+            width: 150px;
+        }
+        .auto-style2 {
+            height: 26px;
+        }
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -13,28 +21,36 @@
             <table>
                 <tr>
                     <td style="padding-left: 20px"><b>Ingrese nombre del producto: </b></td>
-                    <td style="padding-left: 20px"></td>
+                    <td style="padding-left: 20px" class="auto-style1">
+                        <asp:TextBox ID="txtProducto1" runat="server"></asp:TextBox>
+                    </td>
                     <td style="padding-left: 20px"><b>Cantidad: </b></td>
-                    <td style="padding-left: 20px"></td>
+                    <td style="padding-left: 20px">
+                        <asp:TextBox ID="txtCantidad" runat="server"></asp:TextBox>
+                    </td>
 
                 </tr>
                 <tr>
-                    <td style="padding-left: 20px"><b>Ingrese nombre del producto: </b></td>
+                    <td style="padding-left: 20px" class="auto-style2"><b>Ingrese nombre del producto: </b></td>
+                    <td style="padding-left: 20px" class="auto-style2"> 
+                        <asp:TextBox ID="txtProducto2" runat="server"></asp:TextBox>
+                    </td>
+                    <td style="padding-left: 20px" class="auto-style2"><b>Cantidad: </b></td>
+                    <td style="padding-left: 20px" class="auto-style2">
+                        <asp:TextBox ID="txtCantidad2" runat="server"></asp:TextBox>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td style="padding-left: 20px"></td>
+                    <td class="auto-style1"></td>
                     <td></td>
-                    <td style="padding-left: 20px"><b>Cantidad: </b></td>
                     <td></td>
 
                 </tr>
                 <tr>
                     <td style="padding-left: 20px"></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-
-                </tr>
-                <tr>
-                    <td style="padding-left: 20px"></td>
-                    <td></td>
+                    <td class="auto-style1"></td>
                     <td></td>
                     <td></td>
                 </tr>
