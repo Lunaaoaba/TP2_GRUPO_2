@@ -17,7 +17,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
+        <div style="height: 150px">
             <table>
                 <tr>
                     <td style="padding-left: 20px"><b>Ingrese nombre del producto: </b></td>
@@ -26,7 +26,7 @@
                     </td>
                     <td style="padding-left: 20px"><b>Cantidad: </b></td>
                     <td style="padding-left: 20px">
-                        <asp:TextBox ID="txtCantidad" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="txtCantidad1" runat="server"></asp:TextBox>
                     </td>
 
                 </tr>
@@ -54,9 +54,11 @@
                     </td>
                     <td class="auto-style1"></td>
                     <td></td>
-                    <td></td>
+                    <td>&nbsp;</td>
                 </tr>
             </table>
+            <br />
+            <asp:Label ID="lblTablaGenerada" runat="server"></asp:Label>
         </div>
     </form>
 </body>
