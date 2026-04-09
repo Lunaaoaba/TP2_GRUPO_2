@@ -19,8 +19,8 @@ namespace TP2_GRUPO_2
             if (txtProducto1.Text.Trim() != string.Empty && txtProducto2.Text.Trim() != string.Empty &&
                 txtCantidad1.Text.Trim() != string.Empty && txtCantidad2.Text.Trim() != string.Empty)
             {
-                if (int.TryParse(txtCantidad1.Text, out int cantidad1) &&
-                    int.TryParse(txtCantidad2.Text, out int cantidad2))
+                if (int.TryParse(txtCantidad1.Text, out _) &&
+                    int.TryParse(txtCantidad2.Text, out _))
                 {
                     string tabla = "<table border='1'>";
                     tabla += "<tr><td>Producto</td> <td>Cantidad</td> </tr>";
