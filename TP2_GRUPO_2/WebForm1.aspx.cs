@@ -14,10 +14,21 @@ namespace TP2_GRUPO_2
 
         }
 
+        bool validarLetra(TextBox palabras)
+        {
+            foreach (char c in palabras.Text)
+            { 
+                if(!char.IsLetter(c) && !char.IsSeparator(c))
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
         protected void btn_Generar_Click(object sender, EventArgs e)
         {
-            if (txtProducto1.Text.Trim() != string.Empty && txtProducto2.Text.Trim() != string.Empty &&
-                txtCantidad1.Text.Trim() != string.Empty && txtCantidad2.Text.Trim() != string.Empty)
+            if (txtProducto1.Text.Trim() != string.Empty && validarLetra(txtProducto1) && txtProducto2.Text.Trim() != string.Empty && validarLetra(txtProducto2)
+                && txtCantidad1.Text.Trim() != string.Empty && txtCantidad2.Text.Trim() != string.Empty)
             {
                 if (int.TryParse(txtCantidad1.Text, out _) &&
                     int.TryParse(txtCantidad2.Text, out _))
@@ -44,7 +55,8 @@ namespace TP2_GRUPO_2
             }
             else
             {
-                lblTablaGenerada.Text = "Debe completar todos los campos para generar la tabla.";
+                lblTablaGenerada.Text = "Debe completar todos los campos para generar la tabla o ingresar letras en productos.";
+                
             }
         }
     }
