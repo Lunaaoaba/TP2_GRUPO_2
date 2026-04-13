@@ -11,7 +11,22 @@ namespace TP2_GRUPO_2
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                btnlimpiartabla.Visible = false;
+            }
+        }
 
+        bool validarnumerospositivos(TextBox texto)
+        {
+            return int.TryParse(texto.Text, out int numero) && numero >= 0;
+        }
+        void limpiarCampos()
+        {
+            txtProducto1.Text = string.Empty;
+            txtProducto2.Text = string.Empty;
+            txtCantidad1.Text = string.Empty;
+            txtCantidad2.Text = string.Empty;
         }
 
         bool validarLetra(TextBox palabras)
@@ -27,11 +42,16 @@ namespace TP2_GRUPO_2
         }
         protected void btn_Generar_Click(object sender, EventArgs e)
         {
-            if (txtProducto1.Text.Trim() != string.Empty && validarLetra(txtProducto1) && txtProducto2.Text.Trim() != string.Empty && validarLetra(txtProducto2)
-                && txtCantidad1.Text.Trim() != string.Empty && txtCantidad2.Text.Trim() != string.Empty)
+            if (!string.IsNullOrEmpty(txtProducto1.Text.Trim()) && validarLetra(txtProducto1) && !string.IsNullOrEmpty(txtProducto2.Text.Trim()) && validarLetra(txtProducto2)
+                && !string.IsNullOrEmpty(txtCantidad1.Text.Trim()) && !string.IsNullOrEmpty(txtCantidad2.Text.Trim()))
             {
-                if (int.TryParse(txtCantidad1.Text, out _) &&
-                    int.TryParse(txtCantidad2.Text, out _))
+                if(txtProducto1.Text.Trim().ToLower() == txtProducto2.Text.Trim().ToLower())
+                {
+                    lblTablaGenerada.Text = "No puede ingresar productos duplicados!";
+                    limpiarCampos();
+                    return;
+                }
+                if (validarnumerospositivos(txtCantidad1) && validarnumerospositivos(txtCantidad2))
                 {
                     string tabla = "<table border='1'>";
                     tabla += "<tr><td>Producto</td> <td>Cantidad</td> </tr>";
@@ -40,24 +60,28 @@ namespace TP2_GRUPO_2
                     tabla += "<tr><td>TOTAL " + "</td> <td>" + (int.Parse(txtCantidad1.Text) + int.Parse(txtCantidad2.Text)) + "</td> </tr>";
 
                     lblTablaGenerada.Text = tabla;
+                    btnlimpiartabla.Visible = true;
 
-                    txtProducto1.Text = string.Empty;
-                    txtProducto2.Text = string.Empty;
-                    txtCantidad1.Text = string.Empty;
-                    txtCantidad2.Text = string.Empty;
+                    limpiarCampos();
                 }
                 else
                 {
-                    lblTablaGenerada.Text = "Las cantidades deben ser numeros enteros.";
-                    txtCantidad1.Text = string.Empty;
-                    txtCantidad2.Text = string.Empty;
+                    lblTablaGenerada.Text = "Las cantidades deben ser numeros enteros y positivos";
+                    limpiarCampos();
                 }
             }
             else
             {
-                lblTablaGenerada.Text = "Debe completar todos los campos para generar la tabla o ingresar letras en productos.";
-                
+                lblTablaGenerada.Text = "Debe completar todos los campos para generar la tabla / Ingresar letras en productos!";
+                limpiarCampos();        
             }
+        }
+
+        protected void btnlimpiartabla_Click(object sender, EventArgs e)
+        {
+            lblTablaGenerada.Text = string.Empty;
+            limpiarCampos();
+            btnlimpiartabla.Visible = false;
         }
     }
 }
