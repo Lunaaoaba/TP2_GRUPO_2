@@ -68,24 +68,32 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Web.config" />
-    <Content Include="WebForm1.aspx" />
-    <Content Include="WebForm2.aspx" />
+    <Content Include="ejercicio_1.aspx" />
+    <Content Include="ejercicio_2.aspx" />
+    <Content Include="ej_2_resumen.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="WebForm1.aspx.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
+    <Compile Include="ejercicio_1.aspx.cs">
+      <DependentUpon>ejercicio_1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="WebForm1.aspx.designer.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
+    <Compile Include="ejercicio_1.aspx.designer.cs">
+      <DependentUpon>ejercicio_1.aspx</DependentUpon>
     </Compile>
-    <Compile Include="WebForm2.aspx.cs">
-      <DependentUpon>WebForm2.aspx</DependentUpon>
+    <Compile Include="ejercicio_2.aspx.cs">
+      <DependentUpon>ejercicio_2.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="WebForm2.aspx.designer.cs">
-      <DependentUpon>WebForm2.aspx</DependentUpon>
+    <Compile Include="ejercicio_2.aspx.designer.cs">
+      <DependentUpon>ejercicio_2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ej_2_resumen.aspx.cs">
+      <DependentUpon>ej_2_resumen.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ej_2_resumen.aspx.designer.cs">
+      <DependentUpon>ej_2_resumen.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
