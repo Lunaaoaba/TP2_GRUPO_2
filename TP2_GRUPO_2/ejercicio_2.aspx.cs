@@ -16,6 +16,11 @@ namespace TP2_GRUPO_2
 
         protected void btnresumen_Click(object sender, EventArgs e)
         {
+           Server.Transfer("ejercicio_2B.aspx");
+        }
+
+        protected void cbltemas_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
         }
     }

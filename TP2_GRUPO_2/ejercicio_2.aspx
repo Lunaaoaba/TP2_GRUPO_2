@@ -8,17 +8,17 @@
     <title></title>
     <style>
         body {
-            background-color: #3C507F;
+            background-color:darkslategray;
         }
-        #container {
+        #conteiner {
             border-radius: 30px;
             border: 2px solid  #7eacac;
             box-shadow: 0 0 10px  #7eacac, 0 0 25px  #7eacac;
             margin: 0 auto;
-            width: 220px;
-            padding: 20px;
+            width: 300px;
+            padding: 40px;
             padding-left: 40px;
-            background-color: #7eacac;
+            background-color:grey;
         }
         p {
             color: black;
@@ -35,24 +35,31 @@
         .textbox {
             border-radius: 5px;
             padding-left: 10px;
+            background-color:blanchedalmond;
         }
         .dropdownlist {
             border-radius: 5px;
+          
         }
         .checkboxlist {
             text-align: center;
+           
         }
         .button {
             border-radius: 1rem;
+            background-color:blanchedalmond;
         }
         .button:hover {
             transform:translateY(-1px) rotateX(360deg);
+        }
+        .auto-style1 {
+            height: 27px;
         }
     </style>
 </head>
 <body>
     <form id="form1" runat="server">
-        <div id="container">
+        <div id="conteiner">
             <table>
                 <tr>
                     <td><p>Nombre: </p></td>
@@ -75,14 +82,19 @@
                 </tr>
                 <tr><td></td><td></td></tr>
                 <tr>
-                    <td><p>Temas: </p></td>
-                    <td></td>
+                    <td class="auto-style1"><p>Temas: </p></td>
+                    <td class="auto-style1">
+                        <asp:CheckBoxList ID="cbltemas" runat="server" BackColor="#CCCCCC">
+<%--                            <asp:ListItem Text ="Ciencias" />
+                            <asp:ListItem Text ="Literatura" />
+                            <asp:ListItem Text ="Historia" />--%>
+                        </asp:CheckBoxList>
+                    </td>
                 </tr>
                 <tr>
                     <td></td>
                     <td style="padding-left: 10px;">
-                        <asp:CheckBoxList ID="cbltemas" runat="server"></asp:CheckBoxList>
-                    </td>
+                        &nbsp;</td>
                 </tr>
                 <tr><td></td><td></td></tr>
                 <tr><td></td><td></td></tr>
