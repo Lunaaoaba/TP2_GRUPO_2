@@ -28,6 +28,13 @@
             padding-top: 10px;
             color: white;
         }
+        .linkbuttongreen {
+            border-radius: 5px 30px;
+            background-color: green;
+            text-align: center;
+            padding-top: 10px;
+            color: white;
+        }
         table{
             text-align: center;
         }
@@ -40,10 +47,13 @@
         <div>
             <table>
                 <tr><td>
-                    <asp:LinkButton ID="lbrojo" CssClass="linkbuttonred" runat="server" Height="30px" Width="100px">Rojo</asp:LinkButton>
+                    <asp:LinkButton ID="lbrojo" CssClass="linkbuttonred" runat="server" Height="30px" Width="100px" OnClick="lbrojo_Click">Rojo</asp:LinkButton>
                     </td></tr>
                 <tr><td>
-                    <asp:LinkButton ID="lbAzul" CssClass="linkbuttonblue" runat="server" Height="30px" Width="100px">Azul</asp:LinkButton>
+                    <asp:LinkButton ID="lbAzul" CssClass="linkbuttonblue" runat="server" Height="30px" Width="100px" OnClick="lbAzul_Click">Azul</asp:LinkButton>
+                    </td></tr>
+                <tr><td>
+                    <asp:LinkButton ID="lbVerde" CssClass="linkbuttongreen" runat="server" Height="30px" Width="100px" OnClick="lbVerde_Click">Verde</asp:LinkButton>
                     </td></tr>
                 <tr><td></td></tr>
                 <tr><td></td></tr>
