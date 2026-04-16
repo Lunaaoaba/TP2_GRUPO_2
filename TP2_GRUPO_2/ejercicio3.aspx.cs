@@ -13,5 +13,15 @@ namespace TP2_GRUPO_2
         {
 
         }
+
+        protected void lbrojo_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        protected void lbAzul_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
