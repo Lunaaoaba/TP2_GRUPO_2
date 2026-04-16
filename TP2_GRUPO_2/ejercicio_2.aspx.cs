@@ -9,6 +9,15 @@ namespace TP2_GRUPO_2
 {
     public partial class WebForm2 : System.Web.UI.Page
     {
+        bool validarletras(TextBox palabra)
+        {
+            foreach (char c in palabra.Text.Trim())
+            {
+                if (!char.IsLetter(c) && !char.IsSeparator(c))
+                    return false;
+            }
+            return true;
+        }
         protected void Page_Load(object sender, EventArgs e)
         {
             if(!IsPostBack)
@@ -26,7 +35,11 @@ namespace TP2_GRUPO_2
 
         protected void btnresumen_Click(object sender, EventArgs e)
         {
-           Server.Transfer("ejercicio_2B.aspx");
+            if(!string.IsNullOrEmpty(txtnombre.Text.Trim()) && !string.IsNullOrEmpty(txtapellido.Text.Trim()) && 
+                validarletras(txtnombre) && validarletras(txtapellido))
+            {
+                Server.Transfer("ejercicio_2B.aspx");
+            }
         }
     }
 }

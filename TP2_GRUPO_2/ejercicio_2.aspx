@@ -15,8 +15,8 @@
             border: 2px solid  #7eacac;
             box-shadow: 0 0 10px  #7eacac, 0 0 25px  #7eacac;
             margin: 0 auto;
-            width: 300px;
-            padding: 40px;
+            width: 235px;
+            padding: 20px;
             padding-left: 40px;
             background-color:grey;
         }
@@ -52,9 +52,6 @@
         .button:hover {
             transform:translateY(-1px) rotateX(360deg);
         }
-        .auto-style1 {
-            height: 27px;
-        }
     </style>
 </head>
 <body>
@@ -64,37 +61,32 @@
                 <tr>
                     <td><p>Nombre: </p></td>
                     <td style="padding-left: 10px;">
-                        <asp:TextBox ID="txtnombre" CssClass="textbox" runat="server" Width="110px" Height="24px"></asp:TextBox>
+                        <asp:TextBox ID="txtnombre" CssClass="textbox" runat="server" Width="120px" Height="24px"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
                     <td><p>Apellido:</p></td>
                     <td style="padding-left: 10px;">
-                        <asp:TextBox ID="txtapellido" CssClass="textbox" runat="server" Width="110px" Height="24px"></asp:TextBox>
+                        <asp:TextBox ID="txtapellido" CssClass="textbox" runat="server" Width="120px" Height="24px"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
                     <td><p>Ciudad: </p></td>
                     <td style="padding-left: 10px;">
-                        <asp:DropDownList ID="ddlciudad" CssClass="dropdownlist" runat="server" Height="22px" Width="80px">
+                        <asp:DropDownList ID="ddlciudad" CssClass="dropdownlist" runat="server" Height="22px" Width="120px">
                         </asp:DropDownList>
                     </td>
                 </tr>
                 <tr><td></td><td></td></tr>
                 <tr>
-                    <td class="auto-style1"><p>Temas: </p></td>
-                    <td class="auto-style1">
-                        <asp:CheckBoxList ID="cbltemas" runat="server" BackColor="#CCCCCC">
-<%--                            <asp:ListItem Text ="Ciencias" />
-                            <asp:ListItem Text ="Literatura" />
-                            <asp:ListItem Text ="Historia" />--%>
-                        </asp:CheckBoxList>
+                    <td><p>Temas: </p></td>
+                    <td>
+                        <asp:CheckBoxList ID="cbltemas" runat="server"></asp:CheckBoxList>
                     </td>
                 </tr>
                 <tr>
                     <td></td>
-                    <td style="padding-left: 10px;">
-                        &nbsp;</td>
+                    <td style="padding-left: 10px;"></td>
                 </tr>
                 <tr><td></td><td></td></tr>
                 <tr><td></td><td></td></tr>
