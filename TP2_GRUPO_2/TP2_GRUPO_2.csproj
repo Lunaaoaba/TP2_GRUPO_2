@@ -67,12 +67,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ejercicio3.aspx" />
     <Content Include="ejercicio_2B.aspx" />
     <Content Include="Web.config" />
     <Content Include="ejercicio_1.aspx" />
     <Content Include="ejercicio_2.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ejercicio3.aspx.cs">
+      <DependentUpon>ejercicio3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ejercicio3.aspx.designer.cs">
+      <DependentUpon>ejercicio3.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ejercicio_2B.aspx.cs">
       <DependentUpon>ejercicio_2B.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

@@ -4,7 +4,6 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using static System.Net.Mime.MediaTypeNames;
 
 namespace TP2_GRUPO_2
 {
@@ -20,7 +19,13 @@ namespace TP2_GRUPO_2
             lblNombreSelecc.Text = nombre;
             lblCuidadSelecc.Text = ciudad;
 
+            string temas = string.Empty;
+            CheckBoxList clb = ((CheckBoxList)PreviousPage.FindControl("cbltemas"));
+            foreach(ListItem items in clb.Items)
+            {
+                if(items.Selected)
+                    lbltemas.Text += items.Text + "<br>";
+            }
         }
-           
     }
 }

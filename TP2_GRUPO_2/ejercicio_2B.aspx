@@ -7,80 +7,68 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
     <style type="text/css">
-         body {
-     background-color:darkslategray;
- }
- #contenedor {
-     border-radius: 30px;
-     border: 2px solid  #7eacac;
-     box-shadow: 0 0 10px  #7eacac, 0 0 25px  #7eacac;
-     margin: 0 auto;
-     width: 300px;
-     padding: 40px;
-     padding-left: 40px;
-     background-color:grey;
- }
- p {
-     color: black;
- }
-        .auto-style1 {
+        body {
+            background-color: darkslategray;
+        }
 
-            width: 100%;
+        #contenedor {
+            border-radius: 30px;
+            border: 2px solid #7eacac;
+            box-shadow: 0 0 10px #7eacac, 0 0 25px #7eacac;
+            margin: 0 auto;
+            width: 230px;
+            padding: 20px 40px 30px 75px;
+            background-color: grey;
         }
-        .auto-style2 {
-            width: 107px;
+        form {
+            height: 80vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
-        .auto-style3 {
-            width: 107px;
-            height: 23px;
+
+        p {
+            color: black;
         }
-        .auto-style4 {
-            height: 23px;
-        }
-    </style>
+        </style>
 </head>
 <body>
     <form id="form1" runat="server">
         
             <div id="contenedor">
-            <table class="auto-style1">
+            <table >
                 <tr>
                     <td colspan="2">
-                        <asp:Label ID="lblResumen" runat="server" BackColor="#CCCCCC" Font-Bold="True" Font-Italic="False" Font-Size="X-Large" Text="Resumen"></asp:Label>
+                        <h1><asp:Label ID="lblResumen" runat="server" Text="Resumen"></asp:Label></h1>
                     </td>
                 </tr>
                 <tr>
-                    <td class="auto-style2">Nombre:</td>
+                    <td style="padding-right: 20px">Nombre:</td>
+                    <td><b><asp:Label ID="lblNombreSelecc" runat="server"></asp:Label></b></td>
+                </tr>
+                <tr>
+                    <td >Apellido:</td>
                     <td>
-                        <asp:Label ID="lblNombreSelecc" runat="server"></asp:Label>
+                        <b><asp:Label ID="lblApellidoSelecc" runat="server"></asp:Label></b>
                     </td>
                 </tr>
                 <tr>
-                    <td class="auto-style2">Apellido:</td>
+                    <td>Cuidad:</td>
                     <td>
-                        <asp:Label ID="lblApellidoSelecc" runat="server"></asp:Label>
+                        <b><asp:Label ID="lblCuidadSelecc" runat="server"></asp:Label></b>
                     </td>
                 </tr>
                 <tr>
-                    <td class="auto-style3">Cuidad:</td>
-                    <td class="auto-style4">
-                        <asp:Label ID="lblCuidadSelecc" runat="server"></asp:Label>
+                    <td ></td>
+                </tr>
+                <tr>
+                    <td colspan="2">Los temas elejidos son: </td>
+                </tr>
+                <tr>
+                    <td ></td>
+                    <td>
+                        <b><asp:Label ID="lbltemas" runat="server"></asp:Label></b>
                     </td>
-                </tr>
-                <tr>
-                    <td colspan="2">&nbsp;</td>
-                </tr>
-                <tr>
-                    <td class="auto-style2">&nbsp;</td>
-                    <td>&nbsp;</td>
-                </tr>
-                <tr>
-                    <td class="auto-style2">&nbsp;</td>
-                    <td>&nbsp;</td>
-                </tr>
-                <tr>
-                    <td class="auto-style2">&nbsp;</td>
-                    <td>&nbsp;</td>
                 </tr>
             </table>
         </div>
