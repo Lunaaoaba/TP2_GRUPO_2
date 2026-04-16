@@ -7,15 +7,15 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
     <style type="text/css">
-         body {
-     background-color: lavender;
- }
- #conteiner {
-     width: 400px;
-     margin: 0px auto;
-     border: 1px solid;
-     background-color: azure;
- }
+            body {
+        background-color: lavender;
+    }
+    #conteiner {
+        width: 400px;
+        margin: 0px auto;
+        border: 1px solid;
+        background-color: azure;
+    }
         .auto-style1 {
             width: 100%;
         }
