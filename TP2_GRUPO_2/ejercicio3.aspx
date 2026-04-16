@@ -6,8 +6,25 @@
 <head runat="server">
     <style>
         body{
-            background-color: dimgrey;
+            background: linear-gradient(270deg, #ad9191, #a0a0bc, #99af99);
+            background-size: 400% 400%;
+            animation: move 10s linear infinite;
         }
+
+        @keyframes move {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
         form{
             display: flex; 
             justify-content: center; 
@@ -57,7 +74,9 @@
                     </td></tr>
                 <tr><td></td></tr>
                 <tr><td></td></tr>
-                <tr><td></td></tr>
+                <tr><td>
+                    <h1><asp:Label ID="lbltexto" runat="server" Text="Texto coloreado "></asp:Label></h1>
+                    </td></tr>
             </table>
         </div>
     </form>

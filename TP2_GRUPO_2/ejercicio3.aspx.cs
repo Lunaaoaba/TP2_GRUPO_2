@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -11,17 +12,17 @@ namespace TP2_GRUPO_2
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         protected void lbrojo_Click(object sender, EventArgs e)
         {
-            
+            lbltexto.ForeColor = System.Drawing.Color.Red;
         }
 
         protected void lbAzul_Click(object sender, EventArgs e)
         {
-
+            lbltexto.ForeColor = System.Drawing.Color.Blue;
         }
 
         protected void lbVerde_Click(object sender, EventArgs e)
