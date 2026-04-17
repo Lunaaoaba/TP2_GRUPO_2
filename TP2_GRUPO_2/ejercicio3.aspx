@@ -10,6 +10,11 @@
             background-size: 400% 400%;
             animation: move 10s linear infinite;
         }
+        #CounterStrike{
+            background-color : rgba(255, 255, 255, 0.3);
+            padding: 20px;
+            border-radius: 10px;
+        }
 
         @keyframes move {
             0% {
@@ -52,8 +57,39 @@
             padding-top: 10px;
             color: white;
         }
+        .linkbuttonRegresar {
+            display: inline-block;
+            border-radius: 30px;
+            background-color: transparent;
+            border: 2px dashed #555;
+            color: #333 !important;
+            padding-top: 10px;
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.2s ease;
+        }
+        .animar {
+            animation: cambioColor 0.4s ease;
+        }
+        @keyframes cambioColor {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        .activo {
+            box-shadow: 0 0 15px white;
+            transform: scale(1.1);
+            border: 2px solid white;
+        }
         table{
             text-align: center;
+        }
+        .auto-style1 {
+            height: 24px;
         }
     </style>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -61,7 +97,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
+        <div id="CounterStrike">
             <table>
                 <tr><td>
                     <asp:LinkButton ID="lbrojo" CssClass="linkbuttonred" runat="server" Height="30px" Width="100px" OnClick="lbrojo_Click">Rojo</asp:LinkButton>
@@ -72,11 +108,14 @@
                 <tr><td>
                     <asp:LinkButton ID="lbVerde" CssClass="linkbuttongreen" runat="server" Height="30px" Width="100px" OnClick="lbVerde_Click">Verde</asp:LinkButton>
                     </td></tr>
-                <tr><td></td></tr>
+                <tr><td>
+                    <asp:LinkButton ID="LbVolverColor" CssClass="linkbuttonRegresar" runat="server" Height="30px" Width="100px" OnClick="LbVolverColor_Click1" >Regresar</asp:LinkButton>
+                    </td></tr>
                 <tr><td></td></tr>
                 <tr><td>
                     <h1><asp:Label ID="lbltexto" runat="server" Text="Texto coloreado "></asp:Label></h1>
-                    </td></tr>
+                    <tr><td class="auto-style1"></td></tr>
+                </td></tr>
             </table>
         </div>
     </form>

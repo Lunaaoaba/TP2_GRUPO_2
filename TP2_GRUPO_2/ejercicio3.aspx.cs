@@ -18,16 +18,45 @@ namespace TP2_GRUPO_2
         protected void lbrojo_Click(object sender, EventArgs e)
         {
             lbltexto.ForeColor = System.Drawing.Color.Red;
+            lbltexto.CssClass = "";
+            lbltexto.CssClass = "animar";
+
+            lbrojo.CssClass = "linkbuttonred activo";
+            lbAzul.CssClass = "linkbuttonblue";
+            lbVerde.CssClass = "linkbuttongreen";
         }
 
         protected void lbAzul_Click(object sender, EventArgs e)
         {
             lbltexto.ForeColor = System.Drawing.Color.Blue;
+            lbltexto.CssClass = "";
+            lbltexto.CssClass = "animar";
+
+            lbrojo.CssClass = "linkbuttonred";
+            lbAzul.CssClass = "linkbuttonblue activo";
+            lbVerde.CssClass = "linkbuttongreen";
         }
 
         protected void lbVerde_Click(object sender, EventArgs e)
         {
+            lbltexto.ForeColor = System.Drawing.Color.Green;
+            lbltexto.CssClass = "";
+            lbltexto.CssClass = "animar";
 
+            lbrojo.CssClass = "linkbuttonred";
+            lbAzul.CssClass = "linkbuttonblue";
+            lbVerde.CssClass = "linkbuttongreen activo";
+        }
+
+        protected void LbVolverColor_Click1(object sender, EventArgs e)
+        {
+            lbltexto.ForeColor = System.Drawing.Color.Black;
+            lbltexto.CssClass = "";
+            lbltexto.CssClass = "animar";
+
+            lbrojo.CssClass = "linkbuttonred";
+            lbAzul.CssClass = "linkbuttonblue";
+            lbVerde.CssClass = "linkbuttongreen";
         }
     }
 }
