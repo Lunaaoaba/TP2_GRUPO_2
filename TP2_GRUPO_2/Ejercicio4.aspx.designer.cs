@@ -11,7 +11,7 @@ namespace TP2_GRUPO_2
 {
 
 
-    public partial class ejercicio3
+    public partial class Ejercicio4
     {
 
         /// <summary>
@@ -24,48 +24,48 @@ namespace TP2_GRUPO_2
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// Control lbrojo.
+        /// Control lblUsuario.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lbrojo;
+        protected global::System.Web.UI.WebControls.Label lblUsuario;
 
         /// <summary>
-        /// Control lbAzul.
+        /// Control txbUsuario.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lbAzul;
+        protected global::System.Web.UI.WebControls.TextBox txbUsuario;
 
         /// <summary>
-        /// Control lbVerde.
+        /// Control lblclave.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lbVerde;
+        protected global::System.Web.UI.WebControls.Label lblclave;
 
         /// <summary>
-        /// Control LbVolverColor.
+        /// Control txtclave.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LbVolverColor;
+        protected global::System.Web.UI.WebControls.TextBox txtclave;
 
         /// <summary>
-        /// Control lbltexto.
+        /// Control btnEnviar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbltexto;
+        protected global::System.Web.UI.WebControls.Button btnEnviar;
     }
 }
