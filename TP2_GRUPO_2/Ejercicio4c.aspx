@@ -14,7 +14,7 @@
     }
     h1 {
         display: inline-block;
-        max-width: 560px;
+        max-width: 852px;
         font-size: 38px;
         font-family: Arial, Helvetica, sans-serif;
         white-space: nowrap;
@@ -29,7 +29,7 @@
         }
 
         to {
-            width: 560px;
+            width: 852px;
         }
     }
     @keyframes cursor {
@@ -47,7 +47,7 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <asp:Label ID="lbl_invalido" runat="server" Text="USUARIO INVALIDO: INGRESO NO PERMITIDO" Font-Size="XX-Large"></asp:Label>
+            <h1><asp:Label ID="lbl_invalido" runat="server"></asp:Label></h1>
         </div>
     </form>
 </body>

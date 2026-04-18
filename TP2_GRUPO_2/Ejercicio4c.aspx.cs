@@ -11,7 +11,7 @@ namespace TP2_GRUPO_2
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            lbl_invalido.Text = "USUARIO INVALIDO: INGRESO NO PERMITIDO";
         }
     }
 }
