@@ -11,7 +11,12 @@ namespace TP2_GRUPO_2
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            lbl_invalido.Text = "USUARIO INVALIDO: INGRESO NO PERMITIDO";
+            if (!IsPostBack) { }
+        }
+
+        protected void btnregresar_Click(object sender, EventArgs e)
+        {
+            Server.Transfer("Ejercicio4a.aspx");
         }
     }
 }

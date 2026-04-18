@@ -6,12 +6,37 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <style>
-        form{
-            display: flex; 
-            justify-content: center; 
-            align-items: center; 
+        body {
+            background: linear-gradient(270deg, #ad9191, #a0a0bc, #99af99);
+            background-size: 400% 400%;
+            animation: move 10s linear infinite;
+        }
+
+        #container {
+            background-color: rgba(255, 255, 255, 0.3);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        @keyframes move {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+        form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             height: 80vh;
         }
+
         h1 {
             display: inline-block;
             max-width: 560px;
