@@ -9,7 +9,7 @@ namespace TP2_GRUPO_2
 {
     public partial class Ejercicio4 : System.Web.UI.Page
     {
-        const string nombre = "claudio";
+        const string usuario = "claudio";
         const string clave = "casas";
 
         protected void Page_Load(object sender, EventArgs e)
@@ -19,7 +19,14 @@ namespace TP2_GRUPO_2
 
         protected void btnEnviar_Click(object sender, EventArgs e)
         {
-
+            if(txbUsuario.Text == usuario && txtclave.Text == clave)
+            {
+                Response.Redirect("Ejercicio4b.aspx?usuario=" + txbUsuario.Text);
+            }
+            else
+            {
+                Server.Transfer("Ejercicio4c.aspx");
+            }
         }
     }
 }
