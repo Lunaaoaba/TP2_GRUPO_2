@@ -272,7 +272,7 @@ __pycache__/
 # tools/
 
 # por mocos mios
-.zip
+*.zip
 
 # End of https://www.toptal.com/developers/gitignore/api/aspnetcore
 
