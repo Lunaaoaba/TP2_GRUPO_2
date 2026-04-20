@@ -28,7 +28,7 @@ namespace TP2_GRUPO_2
         {
             int memoria = int.Parse(ddlmemoria.SelectedValue);
 
-            string totalAccesorios = "";
+            float totalAccesorios = 0;
 
             foreach (ListItem item in cblAccesorios.Items)
             {
@@ -36,6 +36,34 @@ namespace TP2_GRUPO_2
                 {
                     totalAccesorios += float.Parse(item.Value);
                 }
+            }
+            lblPreciocalculado.Text = "El Precio final es de " + "$" + (memoria + totalAccesorios);
+            lblmemoria_seleccionada.Text = "Memoria seleccionada: " + ddlmemoria.SelectedItem.Text;
+
+            string AcceorioSeleccionados = "";
+
+            foreach (ListItem item in cblAccesorios.Items)
+            {
+                if (item.Selected) {
+                    AcceorioSeleccionados += "</br>" + item.Text;
+                }
+
+            }
+            if(cblAccesorios.SelectedIndex != -1)
+            {
+                lblaccesorios_seleccionados.Text = "Accesorios Seleccionados: " + AcceorioSeleccionados.ToString();
+            }
+            else
+            {
+                lblaccesorios_seleccionados.Text = "No se seleccionaron accesorios.";
+            }
+        }
+
+        protected void ddlmemoria_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(lblPreciocalculado.Text) && lblPreciocalculado.Text.Contains("$"))
+            {
+                lblPreciocalculado.Text = "Selección modificada. Calcule el precio nuevamente.";
             }
         }
     }
